@@ -1,0 +1,187 @@
+---
+title: "How Does a Bike-Share Navigate Speedy Success ?"
+author: "Mahmoud Essam"
+date: "`r Sys.Date()`"
+output:
+  html_document: default
+  word_document: default
+  pdf_document: default
+---
+
+## Introduction :
+
+*Welcome to the Cyclistic bike-share analysis! in this scenario will discuess casual riders and annual members use Cyclistic bikes differently till we can convert casual riders into annual members.*
+
+## Scenario
+
+*The director of marketing believes the company's future success depends on maximizing the number of annual memberships Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members*
+
+## Installing packages
+
+*first of all we will now import the important packages we need for now .*
+
+**\# Install required packages**
+
+**\# tidyverse for data import and wrangling**
+
+**\# lubridate for date functions**
+
+**\# ggplot for visualization**
+
+## Importing Packages
+
+```{r}
+library(tidyverse)
+library(lubridate)
+library(janitor)
+library(skimr)
+library(hydroTSM)
+```
+
+## **Let's involve into the project**
+
+*► download the data we need from [this link](https://divvy-tripdata.s3.amazonaws.com/index.html) as it's available by Motivate International Inc. under this [license](https://ride.divvybikes.com/data-license-agreement)*
+
+► after this step now it's time to put all data into R
+
+```{r}
+
+d1 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202109-divvy-tripdata.csv")
+d2 <-  read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202110-divvy-tripdata.csv")
+d3 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202111-divvy-tripdata.csv")
+d4 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202112-divvy-tripdata.csv")
+d5 <-  read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202201-divvy-tripdata.csv")
+d6 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202202-divvy-tripdata.csv")
+d7 <-  read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202203-divvy-tripdata.csv")
+d8 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202204-divvy-tripdata.csv")
+d9 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202205-divvy-tripdata.csv")
+d10 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202206-divvy-tripdata.csv")
+d11 <-  read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202207-divvy-tripdata.csv")
+d12 <- read.csv("C:/Users/BLU-RAY/Desktop/Divvy-TripData/Work_Data_Sheets_CSV/Trip_Travles_1_To_12_From_2020_To_2022/Trips_of _last_12_months/202208-divvy-tripdata.csv")
+```
+
+► **Now we need to bind all this data into one**
+
+```{r}
+Ddata <- rbind(d1,d2,d3,d4,d5,d6,d7,d8,d9,d10,d11,d12)
+```
+
+► **make a great view for our current data :**
+
+```{r}
+summary(Ddata)
+glimpse(Ddata)
+skim_without_charts(Ddata)
+```
+
+► **Cleaning our data :**
+
+```{r}
+old_NOR <- nrow(Ddata) #to see the number of old data
+New_Data <- distinct(Ddata) # to return data without any duplication
+New_NOR <- nrow(New_Data) #to see the number after get duplicated
+if (old_NOR == New_NOR) {
+  print("This data doesn't have any duplicate numbers")
+}else{
+  print("This data have duplicated number = " + old_NOR-New_NOR)
+}
+```
+
+► **Now we need to return all data we need to use :**
+
+*Now will start our time with analyze :*
+
+```{r}
+unique(Ddata$rideable_type) # to check the unique kinds of rideables 
+unique(Ddata$member_casual) # to check the unique kinds of riders
+Ddata <- New_Data %>% select(2, 3, 4, 13) # the current data required 
+Ddata$date <- as.Date(Ddata$started_at)#converting it into Date type
+Ddata <- Ddata %>% mutate(
+      start_year = year(started_at),
+      start_month = month(started_at),
+      start_day = day(started_at))
+Ddata <- Ddata %>%arrange(date) #sorting the data by date
+Ddata <- Ddata %>% mutate(season = time2season(date,out.fmt = "seasons")) # Convert dates to seasons
+Ddata <- Ddata %>% mutate(Months = month.name[start_month]) #create month named
+Ddata$day_of_week <- format(as.Date(Ddata$date), "%A") #adding day column
+Ddata$day_of_week <- ordered(Ddata$day_of_week, levels=c("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")) # ordering day of the week
+```
+
+*But what about if our end date lower than start one ? let's check it !*
+
+```{r}
+Ddata %>% filter(ended_at < started_at) %>% count() #here will know about the number of negative date 
+Ddata <- Ddata %>% filter(ended_at>started_at) #assigned the new data without any negative inputs
+str(Ddata)
+```
+
+*Now back to our analyze by getting the ride length*
+
+```{r}
+Ddata <- Ddata %>% mutate(Ride_Length = as.numeric(difftime(Ddata$ended_at,Ddata$started_at)))  # to return the ride length of the bikers in seconds
+Ddata <- Ddata %>% mutate(Ride_Length_in_mins = as.numeric(difftime(Ddata$ended_at,Ddata$started_at,units = "mins"))) # to return the ride length of the bikers in minutes
+colSums(is.na(Ddata)) #to check the na data
+```
+
+*Give a look to our current data to make sense of it :*
+
+```{r}
+summary(Ddata$Ride_Length) #to know what's the maximum and minimum and other details of our ride
+aggregate(Ddata$Ride_Length ~ Ddata$member_casual, FUN = max)# Comparing members and 
+aggregate(Ddata$Ride_Length ~ Ddata$member_casual, FUN = min)# Comparing members and casual users min
+aggregate(Ddata$Ride_Length ~ Ddata$member_casual, FUN = median)# Comparing members and casual users median
+aggregate(Ddata$Ride_Length ~ Ddata$member_casual, FUN = mean) # Comparing members and casual users mean
+
+```
+
+*Now we got a great summary of our current data , now let's pivot it ! :*
+
+```{r echo=TRUE}
+#Step 1 let's know number of rides per day of member and casual 
+number_of_rides_per_day <- Ddata%>%group_by(member_casual,Ddata$day_of_week)%>%summarise(number_of_rides_general=n()) 
+number_of_rides_per_day
+#Step 2 let's know number of rides per month of member and casual 
+number_of_rides_per_month <- Ddata%>%group_by(member_casual,Ddata$Months)%>%summarise(number_of_rides_general=n()) 
+number_of_rides_per_month
+#step 3 let's know number of rides with kind of the ridable 
+number_of_rides_per_ridable <- Ddata %>%group_by(member_casual,Ddata$rideable_type)%>%summarise(number_of_rides_general=n())
+number_of_rides_per_ridable
+#step 4 let's know number of rides with kind of the ridable 
+number_of_rider_per_season <- Ddata%>%group_by(member_casual,Ddata$season)%>%summarise(number_of_rides_general=n())
+number_of_rider_per_season
+#step 5 Number of riders in last 12 months
+number_of_riders_per_in_last_12_months <- Ddata%>%group_by(member_casual)%>%summarise(number_of_rides_general=n())
+```
+
+*after knowing current requirements of riders to know what's the things affect on them, let's test their time in riding :*
+
+```{r}
+#Calculate ride length per member and casual in day
+Avg_Time_per_day <- aggregate(Ddata$Ride_Length_in_mins ~Ddata$member_casual + Ddata$day_of_week,FUN = mean)
+Avg_Time_per_day
+#Calcualte ride length per member and casual in month 
+Avg_Time_per_month <- aggregate(Ddata$Ride_Length_in_mins~Ddata$member_casual + Ddata$Months,FUN = mean)
+Avg_Time_per_month
+#Calculate ride length per member and casual in type of ridable 
+Avg_Time_per_Ride <- aggregate(Ddata$Ride_Length_in_mins~Ddata$member_casual + Ddata$rideable_type,FUN = mean)
+Avg_Time_per_Ride
+#Calculate ride length per member and casual in season
+Avg_Time_per_season <- aggregate(Ddata$Ride_Length_in_mins~Ddata$member_casual+Ddata$season,FUN = mean)
+Avg_Time_per_season
+```
+
+*in our last destination now it's time for some little visualize so we are in need to export this data now for tableau for some viz with excel !*
+
+```{r}
+#Exporting our data out 
+write.csv(Ddata,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/Total_Data.csv")
+write.csv(number_of_rides_per_day,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/number_of_rides_per_day.csv")
+write.csv(number_of_rides_per_month,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/number_of_rides_per_month.csv")
+write.csv(number_of_rides_per_ridable,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/number_of_rides_per_ridable.csv")
+write.csv(number_or_rider_per_season,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/number_of_rides_per_season.csv")
+write.csv(number_of_riders_per_in_last_12_months,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/number_of_riders_per_in_last_12_months.csv")
+write.csv(Avg_Time_per_day,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/Avg_time_per_day.csv")
+write.csv(Avg_Time_per_month,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/Avg_time_per_month.csv")
+write.csv(Avg_Time_per_Ride,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/Avg_Time_per_Ride.csv")
+write.csv(Avg_Time_per_season,"C:/Users/BLU-RAY/Desktop/Divvy-TripData/Result Data/Avg_Time_per_Season.csv")
+```
