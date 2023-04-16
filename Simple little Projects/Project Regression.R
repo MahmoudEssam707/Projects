@@ -1,13 +1,13 @@
 # Write your model
 # Simple linear regression
 # Check list
-# SXX,Syy,Sxy(Checked)(Mahmoud and Zyad).
-# Beta 1,Beta0(Checked)(Mahmoud and Zyad).
-# SSR,SSE(Checked)(Bisho and Hamdi).
-# Anova table(Checked)(ziad and ali).
-# Confidence interval for estimator at given significant level(Checked)(gaber and safy).
-# Calculation of C.l. for mean response and new observation(Checked)(Gowely and Ashraf).
-# Scatter plot contain fitted line(Checked)(Mahmoud).
+# SXX,Syy,Sxy(Checked)
+# Beta 1,Beta0(Checked)
+# SSR,SSE(Checked)
+# Anova table(Checked)
+# Confidence interval for estimator at given significant level(Checked)
+# Calculation of C.l. for mean response and new observation(Checked)
+# Scatter plot contain fitted line(Checked)
 SLR <- function(Data){
   # Getting needed data
   X <- Data$x
