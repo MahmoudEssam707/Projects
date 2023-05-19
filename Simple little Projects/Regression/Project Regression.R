@@ -68,34 +68,34 @@ SLR <- function(Data){
   # put all this text in lonely file
   # Print summary statistics
   cat("Summary statistics:\n"
- ,"  SXX: ", SXX, "\n"
- ,"  SYY: ", Syy, "\n"
- ,"  SXy: ", SXy, "\n"
- ,"  Beta One (slope): ", Beta_1, "\n"
- ,"  Beta node (intercept): ", Beta_0, "\n"
- ,"  SST: ", Syy, "\n"
- ,"  SSR: ", SSR, "\n"
- ,"  SSE: ", SSE, "\n"
- ,"  R-squared: ", round(R_squared * 100, 2), "% in the ", direction, " direction.\n")
+      ,"  SXX: ", SXX, "\n"
+      ,"  SYY: ", Syy, "\n"
+      ,"  SXy: ", SXy, "\n"
+      ,"  Beta One (slope): ", Beta_1, "\n"
+      ,"  Beta node (intercept): ", Beta_0, "\n"
+      ,"  SST: ", Syy, "\n"
+      ,"  SSR: ", SSR, "\n"
+      ,"  SSE: ", SSE, "\n"
+      ,"  R-squared: ", round(R_squared * 100, 2), "% in the ", direction, " direction.\n")
   # Print ANOVA table
   cat("ANOVA table:\n",file="output.txt")
   print(anova_table)
   
   # Print confidence intervals
   cat("\nConfidence intervals:\n"
- ,"  CI for Beta One: ", Lower_Beta_1, " < B1 < ", Upper_Beta_1, "\n"
- ,"  CI for Beta Node: ", Lower_Beta_0, " < B0 < ", Upper_Beta_0, "\n"
- ,"  CI for Y0 Mean Response: ", Y0_mean_reponse_lower, " < Y0 < ", Y0_mean_reponse_upper, "\n"
- ,"  CI for Y0 New Observation: ", Y0_new_obs_lower, " < Y0 < ", Y0_new_obs_upper, "\n")
+      ,"  CI for Beta One: ", Lower_Beta_1, " < B1 < ", Upper_Beta_1, "\n"
+      ,"  CI for Beta Node: ", Lower_Beta_0, " < B0 < ", Upper_Beta_0, "\n"
+      ,"  CI for Y0 Mean Response: ", Y0_mean_reponse_lower, " < Y0 < ", Y0_mean_reponse_upper, "\n"
+      ,"  CI for Y0 New Observation: ", Y0_new_obs_lower, " < Y0 < ", Y0_new_obs_upper, "\n")
   
   # Plot regression line
   plot(X, y)
   abline(a = Beta_0, b = Beta_1, col = "red", lwd = 3)
 }
 MLR <- function(Data){
-  # Constructing needed data
-  my_df <- as.matrix(data)
-  big_x <- cbind(b0=rep(1,length(data)),my_df)
+  # Constructing needed Data
+  my_df <- as.matrix(Data)
+  big_x <- cbind(b0=rep(1,length(Data)),my_df)
   x <- big_x[,-ncol(big_x)]
   y <- subset(my_df, select = ncol(my_df))
   xt <- t(x)
@@ -128,19 +128,34 @@ MLR <- function(Data){
     F0 = c(MSR/MSE,"",""))
   # Calculate the Value of R^2
   R_squared <- SSR / SST
-  cat("Summary statistics:\n"
-      ,"  Matrix of X: ", x, "\n"
-      ,"  Matrix of y: ", y, "\n"
-      ,"  Matrix of (XtX): ", xtx, "\n"
-      ,"  Matrix of C (XtX)^-1: ", xtx_inverse, "\n"
-      ,"  Beta values: ", betas, "\n"
-      ,"  SST: ", SST, "\n"
-      ,"  SSR: ", SSR, "\n"
-      ,"  SSE: ", SSE, "\n"
-      ,"  R-squared: ", round(R_squared * 100, 2))
+  cat("Summary statistics:\n")
+  cat("  Matrix of X:\n")
+  print(x)
+  cat("\n")
+  cat("  Vector of y:\n")
+  print(y)
+  cat("\n")
+  cat("  Matrix of (XtX):\n")
+  print(xtx)
+  cat("\n")
+  cat("  Matrix of C (XtX)^-1:\n")
+  print(xtx_inverse)
+  cat("\n")
+  cat("  Beta values:\n")
+  print(betas)
+  cat("\n")
+  cat("SST: ",SST)
+  cat("\n")
+  cat("SSR: ",SSR)
+  cat("\n")
+  cat("SSE: ",SSE)
+  cat("\n")
+  cat("  R-squared:\n")
+  print(round(R_squared * 100, 2))
   # Print ANOVA table
-  cat('ANOVA table')
+  cat("\nANOVA table:\n")
   print(anova_table)
+  
 }
 path <- noquote(file.choose())
 Data <- read.csv(path)
@@ -149,4 +164,3 @@ Function <- switch(value_of_regression,
                    SLR = SLR(Data),
                    MLR = MLR(Data),
                    stop("Invalid input. Please enter 1 or 2."))
-print(Function)
