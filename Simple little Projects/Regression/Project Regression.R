@@ -185,9 +185,10 @@ SLR <- function(Data){
     
     # Add a separator
     cat("\n-----------------------------\n")
+    cat("Simple notes :-\n Blue is confidence interval of Beta one\nGreen for Confidence interval of Mean response\nYellow for Confidence interval of New observation")
   }
   # Run the print : 
-  Printing_Function(SXX, Syy, SXy, Beta_1, Beta_0, SST, SSR, SSE, R_squared,anova_table, CI_Beta, CI_Y0_mean, Fc, F0)
+  Printing_Function(SXX, Syy, SXy, Beta_1, Beta_0, SST, SSR, SSE, R_squared, anova_table, CI_Beta, CI_Y0_mean, Fc, F0)
   # Plotting Regression 
   plot(X, y, xlab = "X", ylab = "Y", main = "Linear Regression", pch = 16)
   abline(a = Beta_0, b = Beta_1, col = "red", lwd = 3)
@@ -224,7 +225,7 @@ MLR <- function(Data){
   # Number of independents and parameters
   k <- ncol(X)-1
   p <- k + 1
-  # Degree of Fredooms
+  # Degree of Freedooms
   DOR <- k
   DOE <- n_row-p
   DOT <- n_row-1
@@ -258,7 +259,7 @@ MLR <- function(Data){
     CI_results <- list()  # Initialize an empty list to store results
     
     for (i in 1:length(Betas)) {
-      SE_Betas <- sqrt(MSE %*% C[i, i])  # C is Inverse matrix
+      SE_Betas <- sqrt(MSE %*% C[i, i])  # C is the Inverse matrix
       Upper_Betas <- Betas[i] + rc * SE_Betas
       Lower_Betas <- Betas[i] - rc * SE_Betas
       
@@ -278,7 +279,7 @@ MLR <- function(Data){
     CI_results <- list()  # Initialize an empty list to store results
     X0_input <- matrix(nrow = length(colnames(X))-1,ncol = 1)
     for (i in 1:(length(colnames(X))-1)) {
-      X0_input[i] <- as.numeric(readline(paste("Please put the value of" , colnames(X)[i+1],": ")))
+      X0_input[i] <- as.numeric(readline(paste("Please put the value of" , colnames(X)[i+1]," to calculate your mean response for this observation: ")))
     }
     # Needed X0
     X0 <- rbind(1,X0_input)
@@ -305,7 +306,7 @@ MLR <- function(Data){
     CI_results <- list()  # Initialize an empty list to store results
     X0_input <- matrix(nrow = length(colnames(X))-1,ncol = 1)
     for (i in 1:(length(colnames(X))-1)) {
-      X0_input[i] <- as.numeric(readline(paste("Please put the value of" , colnames(X)[i+1],": ")))
+      X0_input[i] <- as.numeric(readline(paste("Please put the value of" , colnames(X)[i+1],"to calculate your new observation: ")))
     }
     # Needed X0
     X0 <- rbind(1,X0_input)
@@ -377,6 +378,8 @@ MLR <- function(Data){
     print(kable(C))
     cat("Target Values:")
     print(kable(y))
+    cat("Beta values for each independent variable")
+    print(kable(Betas))
     cat("Predicted Values:")
     print(kable(Y_prediction))
     cat("Error :")
@@ -421,11 +424,11 @@ MLR <- function(Data){
     # Format and print each confidence interval
     # Print confidence intervals for each beta coefficient
     for (i in 1:(length(Betas)-1)) {
-      cat(sprintf("  CI for %s: %.2f < B < %.2f\n", colnames(X)[i+1], CI_Beta[[i+1]]$Lower_Betas, CI_Beta[[i+1]]$Upper_Betas))
+      cat(sprintf("  CI for %s: %.2f > B > %.2f\n", colnames(X)[i+1], CI_Beta[[i+1]]$Lower_Betas, CI_Beta[[i+1]]$Upper_Betas))
     }
     
-    cat(sprintf("  %-20s %.2f < Y0 < %.2f\n", "CI for Y0 Mean Response:", CI_Y0_mean$Lower_Y0_Mean, CI_Y0_mean$Upper_Y0_Mean))
-    cat(sprintf("  %-20s %.2f < Y0 < %.2f\n", "CI for Y0 New Observation:", CI_Y0_new$Lower_Y0_new, CI_Y0_new$Upper_Y0_new))
+    cat(sprintf("  %-20s %.2f > Y0 > %.2f\n", "CI for Y0 Mean Response:", CI_Y0_mean$Lower_Y0_Mean, CI_Y0_mean$Upper_Y0_Mean))
+    cat(sprintf("  %-20s %.2f > Y0 > %.2f\n", "CI for Y0 New Observation:", CI_Y0_new$Lower_Y0_new, CI_Y0_new$Upper_Y0_new))
     
     # Add a separator
     cat("\n-----------------------------\n")
@@ -451,22 +454,39 @@ MLR <- function(Data){
   }
   Plot_Function()
 }
-
-path <- noquote(file.choose())
-Data <- read.csv(path)
-value_of_format <- as.numeric(readline("Which type of Data do you need? : \n1-CSV\n2-Excel\n3-Json\n4-XML\n5-SQL\n6-SAS\n7-SPSS\n8-Feather"))
-Data <- switch (value_of_format,
-                Data=read.csv(path),
-                Data=read_excel(path),
-                Data=fromJSON(path),
-                Data=xmlTreeParse(file = path),
-                Data=sqlQuery(con(odbcConnect(path)),"SELECT * FROM MY TABLE"),
-                Data=read_sas(path),
-                Data=read_spss(path),
-                Data=read_feather(path),
-                stop("Invalid input. one of the choices above you"))
-value_of_regression <- as.numeric(readline("Which type of method do you need? :\n1-SLR(Simple Linear Regression)\n2-MLR(Multiple Linear Regression)"))
-Function <- switch(value_of_regression,
-                   SLR = SLR(Data),
-                   MLR = MLR(Data),
-                   stop("Invalid input. Please enter 1 or 2."))
+repeat {
+  path <- noquote(file.choose())
+  Data <- read.csv(path)
+  
+  value_of_format <- as.numeric(readline("Which type of Data do you need? :\n1-CSV\n2-Excel\n3-Json\n4-XML\n5-SQL\n6-SAS\n7-SPSS\n8-Feather\n"))
+  
+  Data <- switch(value_of_format,
+                 read.csv(path),
+                 read_excel(path),
+                 fromJSON(path),
+                 xmlTreeParse(file = path),
+                 sqlQuery(con(odbcConnect(path)), "SELECT * FROM MY TABLE"),
+                 read_sas(path),
+                 read_spss(path),
+                 read_feather(path),
+                 stop("Invalid input. Please choose one of the options above.")
+  )
+  
+  value_of_regression <- as.numeric(readline("Which type of method do you need?\n1-SLR (Simple Linear Regression)\n2-MLR (Multiple Linear Regression)\n"))
+  
+  switch(value_of_regression,
+         SLR = {
+           SLR(Data)
+         },
+         MLR = {
+           MLR(Data)
+         },
+         stop("Invalid input. Please choose one of the options above.")
+  )
+  
+  continue <- readline("Do you want to continue? (y/n): ")
+  if (tolower(continue) != "y") {
+    cat("Thanks for using my programme, see you soon! ")
+    break  # Break the loop if the user does not want to continue
+  }
+}
