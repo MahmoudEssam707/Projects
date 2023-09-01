@@ -1,3 +1,12 @@
 [submodule "Faculty Projects/Faculty Projects/Data-Mining"]
 	path = Faculty Projects/Faculty Projects/Data-Mining
 	url = https://github.com/MahmoudEssam707/Data-Mining
+[submodule "Faculty Projects/Faculty Projects/Data-Base"]
+	path = Faculty Projects/Faculty Projects/Data-Base
+	url = https://github.com/MahmoudEssam707/Data-base
+[submodule "Faculty Projects/Data-Base"]
+	path = Faculty Projects/Data-Base
+	url = https://github.com/MahmoudEssam707/Data-base
+[submodule "Faculty Projects/Faculty Projects/Regression-Project"]
+	path = Faculty Projects/Faculty Projects/Regression-Project
+	url = https://github.com/MahmoudEssam707/Regression-Project
