@@ -10,3 +10,6 @@
 [submodule "Faculty Projects/Faculty Projects/Regression-Project"]
 	path = Faculty Projects/Faculty Projects/Regression-Project
 	url = https://github.com/MahmoudEssam707/Regression-Project
+[submodule "Faculty Projects/Faculty Projects/MobileProject"]
+	path = Faculty Projects/Faculty Projects/MobileProject
+	url = https://github.com/MahmoudEssam707/MobileProject
