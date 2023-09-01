@@ -13,3 +13,6 @@
 [submodule "Faculty Projects/Faculty Projects/MobileProject"]
 	path = Faculty Projects/Faculty Projects/MobileProject
 	url = https://github.com/MahmoudEssam707/MobileProject
+[submodule "Faculty Projects/Faculty Projects/Embedded-Project"]
+	path = Faculty Projects/Faculty Projects/Embedded-Project
+	url = https://github.com/MahmoudEssam707/Embedded-Project
