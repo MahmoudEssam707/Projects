@@ -16,3 +16,6 @@
 [submodule "Faculty Projects/Faculty Projects/Embedded-Project"]
 	path = Faculty Projects/Faculty Projects/Embedded-Project
 	url = https://github.com/MahmoudEssam707/Embedded-Project
+[submodule "Self Projects/Walmart Analysis"]
+	path = Self Projects/Walmart Analysis
+	url = https://github.com/MahmoudEssam707/Walmart
