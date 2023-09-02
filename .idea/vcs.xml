@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Faculty Projects/Faculty Projects/Data-Base" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Faculty Projects/Faculty Projects/Data-Mining" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Faculty Projects/Faculty Projects/Embedded-Project" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Faculty Projects/Faculty Projects/MobileProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Faculty Projects/Faculty Projects/Regression-Project" vcs="Git" />
+  </component>
+</project>
