@@ -1,0 +1,2662 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>b4967635db9244b49a5028b97b2bccb6</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<div id="710fef0d" class="cell markdown">
+<h2 id="the-anime-recommendation-system">The Anime Recommendation
+system</h2>
+<p>The Anime Recommendation system is one of the best projects as it
+includes a data set containing information regarding user preference
+from 73,516 users on 12,294 anime. Every user in the database will be
+able to add anime to the list and share ratings compiling a data set
+with those ratings. The anime recommendation system project helps in
+creating a system that produces efficient data based on the user viewing
+history and sharing rating. Dataset: <a
+href="https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database"
+class="uri">https://www.kaggle.com/datasets/CooperUnion/anime-recommendations-database</a></p>
+</div>
+<div id="135c9c2c" class="cell markdown">
+<h1 id="content">Content</h1>
+<h3 id="animecsv">Anime.csv</h3>
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>anime_id</td>
+<td>myanimelist.net's unique id identifying an anime</td>
+</tr>
+<tr class="even">
+<td>name</td>
+<td>Full name of anime</td>
+</tr>
+<tr class="odd">
+<td>genre</td>
+<td>Comma-separated list of genres for this anime</td>
+</tr>
+<tr class="even">
+<td>type</td>
+<td>Type of anime (movie, TV, OVA, etc.)</td>
+</tr>
+<tr class="odd">
+<td>episodes</td>
+<td>Number of episodes in this show (1 if movie)</td>
+</tr>
+<tr class="even">
+<td>rating</td>
+<td>Average rating out of 10 for this anime</td>
+</tr>
+<tr class="odd">
+<td>members</td>
+<td>Number of community members that are in this anime's "group"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ratingcsv">Rating.csv</h3>
+<table>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 61%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>user_id</td>
+<td>Non-identifiable randomly generated user id</td>
+</tr>
+<tr class="even">
+<td>anime_id</td>
+<td>The anime that this user has rated</td>
+</tr>
+<tr class="odd">
+<td>rating</td>
+<td>Rating out of 10 this user has assigned (-1 if the user watched it
+but didn't assign a rating)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="things-to-put-light-on"><strong>Things to put light
+on</strong></h3>
+<li>
+<p>The connection between Anime and rates is the anime id <li>REMEMBER!!
+rating in anime data is the total rates have happened to this data, but
+rating in the second table is specific for some user , means by that
+user number 1 has rated with 5 for anime, and the same anime has about
+59 rates and all of them about 9.38 rate</p>
+</div>
+<div id="2713022f" class="cell code" data-execution_count="21">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> re</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> statistics</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> seaborn <span class="im">as</span> sns</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.sparse <span class="im">import</span> csr_matrix</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> NearestNeighbors</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.metrics <span class="im">import</span> precision_score, recall_score</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tabulate <span class="im">import</span> tabulate</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> train_test_split</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> scipy.sparse <span class="im">import</span> csr_matrix</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.preprocessing <span class="im">import</span> MinMaxScaler</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tkinter <span class="im">as</span> tk</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tkinter <span class="im">import</span> filedialog</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">&#39;ignore&#39;</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>sns.set_style(<span class="st">&quot;darkgrid&quot;</span>)</span></code></pre></div>
+</div>
+<div id="4cad6628" class="cell code" data-execution_count="27">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>root <span class="op">=</span> tk.Tk()</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>root.withdraw() <span class="co"># hide the root window</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>file_path_of_anime <span class="op">=</span> filedialog.askopenfilename() <span class="co"># show the file dialog box and wait for user selection</span></span></code></pre></div>
+</div>
+<div id="dbeb6026" class="cell code" data-execution_count="28">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>file_path_of_rating <span class="op">=</span> filedialog.askopenfilename() <span class="co"># show the file dialog box and wait for user selection</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(file_path_of_anime,file_path_of_rating,sep<span class="op">=</span><span class="st">&quot;</span><span class="ch">\n</span><span class="st">&quot;</span>) <span class="co"># print the path of the selected file</span></span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>G:/reg/Data-Mining/anime.csv
+G:/reg/Data-Mining/rating.csv
+</code></pre>
+</div>
+</div>
+<div id="9d08353e" class="cell code" data-execution_count="29">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> wrangle(path_rating, path_anime):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    rating <span class="op">=</span> pd.read_csv(path_rating)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    anime <span class="op">=</span> pd.read_csv(path_anime)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print head values</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Head Values of Rating:&quot;</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(rating.head(), headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Head Values of Anime:&quot;</span>)</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(anime.head())</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print info of data</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">The needed Info of Rating:&quot;</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(rating.info())</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">The needed Info of Anime:&quot;</span>)</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(anime.info())</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print statistical data</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Statistical data about Ratings:&quot;</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(rating.describe().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Statistical data about Anime:&quot;</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(anime.describe().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print nullity before cleaning</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Nullity before cleaning in Rating:&quot;</span>)</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(rating.isnull().<span class="bu">sum</span>().to_frame().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Nullity before cleaning in Anime:&quot;</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(anime.isnull().<span class="bu">sum</span>().to_frame().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Drop null values</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    rating <span class="op">=</span> rating.dropna()</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    anime <span class="op">=</span> anime.dropna()</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print nullity after cleaning</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Nullity after cleaning in Rating:&quot;</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(rating.isnull().<span class="bu">sum</span>().to_frame().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;</span><span class="ch">\n</span><span class="st">Nullity after cleaning in Anime:&quot;</span>)</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(tabulate(anime.isnull().<span class="bu">sum</span>().to_frame().T, headers<span class="op">=</span><span class="st">&#39;keys&#39;</span>, tablefmt<span class="op">=</span><span class="st">&#39;fancy_grid&#39;</span>))</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># converting data of -1 people to NaN</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>    rating.rating.replace({<span class="op">-</span><span class="dv">1</span>: np.nan}, regex<span class="op">=</span><span class="va">True</span>, inplace <span class="op">=</span> <span class="va">True</span>)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Print duplications</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are </span><span class="sc">{</span>rating[rating.duplicated()]<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> duplicate rows in </span><span class="sc">{</span>rating<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> rows in rating dataset.&quot;</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    rating.drop_duplicates(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are now </span><span class="sc">{</span>rating[rating.duplicated()]<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> duplicate rows after process of duplication in </span><span class="sc">{</span>rating<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> rows in rating dataset.&quot;</span>)  </span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are </span><span class="sc">{</span>anime[anime.duplicated()]<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> duplicate rows in </span><span class="sc">{</span>anime<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> rows in anime dataset.&quot;</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    anime.drop_duplicates(inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;There are now </span><span class="sc">{</span>anime[anime.duplicated()]<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> duplicate rows after process of duplication in </span><span class="sc">{</span>anime<span class="sc">.</span>shape[<span class="dv">0</span>]<span class="sc">}</span><span class="ss"> rows in rating dataset.&quot;</span>)  </span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Clean function</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> clean_name(text):</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> re.sub(<span class="vs">r&#39;.hack//&#39;</span>,<span class="st">&#39;&#39;</span>,text)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> re.sub(<span class="vs">r&#39;&amp;quot;&#39;</span>, <span class="st">&#39;&#39;</span>, text)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>        text <span class="op">=</span> re.sub(<span class="vs">r&#39;&amp;amp;&#39;</span>,<span class="st">&#39;&#39;</span>,text)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> text</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Clean names</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    anime[<span class="st">&quot;name&quot;</span>] <span class="op">=</span> anime[<span class="st">&quot;name&quot;</span>].<span class="bu">apply</span>(clean_name)</span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Merge data frames</span></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    Data <span class="op">=</span> pd.merge(anime, rating, on<span class="op">=</span><span class="st">&quot;anime_id&quot;</span>)</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    Data <span class="op">=</span> Data.rename(columns<span class="op">=</span>{<span class="st">&quot;rating_x&quot;</span>: <span class="st">&quot;Average_Rating&quot;</span>, <span class="st">&quot;rating_y&quot;</span>: <span class="st">&quot;Rate_of_user&quot;</span>})</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    <span class="co"># </span></span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Data</span></code></pre></div>
+</div>
+<div id="939e2bd9" class="cell code" data-execution_count="30"
+data-scrolled="false">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Data <span class="op">=</span> wrangle(path_rating<span class="op">=</span>file_path_of_rating,path_anime<span class="op">=</span>file_path_of_anime)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Data</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Head Values of Rating:
+╒════╤═══════════╤════════════╤══════════╕
+│    │   user_id │   anime_id │   rating │
+╞════╪═══════════╪════════════╪══════════╡
+│  0 │         1 │         20 │       -1 │
+├────┼───────────┼────────────┼──────────┤
+│  1 │         1 │         24 │       -1 │
+├────┼───────────┼────────────┼──────────┤
+│  2 │         1 │         79 │       -1 │
+├────┼───────────┼────────────┼──────────┤
+│  3 │         1 │        226 │       -1 │
+├────┼───────────┼────────────┼──────────┤
+│  4 │         1 │        241 │       -1 │
+╘════╧═══════════╧════════════╧══════════╛
+
+Head Values of Anime:
+   anime_id                              name  \
+0     32281                    Kimi no Na wa.   
+1      5114  Fullmetal Alchemist: Brotherhood   
+2     28977                          Gintama°   
+3      9253                       Steins;Gate   
+4      9969                     Gintama&amp;#039;   
+
+                                               genre   type episodes  rating  \
+0               Drama, Romance, School, Supernatural  Movie        1    9.37   
+1  Action, Adventure, Drama, Fantasy, Magic, Mili...     TV       64    9.26   
+2  Action, Comedy, Historical, Parody, Samurai, S...     TV       51    9.25   
+3                                   Sci-Fi, Thriller     TV       24    9.17   
+4  Action, Comedy, Historical, Parody, Samurai, S...     TV       51    9.16   
+
+   members  
+0   200630  
+1   793665  
+2   114262  
+3   673572  
+4   151266  
+
+The needed Info of Rating:
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 7813737 entries, 0 to 7813736
+Data columns (total 3 columns):
+ #   Column    Dtype
+---  ------    -----
+ 0   user_id   int64
+ 1   anime_id  int64
+ 2   rating    int64
+dtypes: int64(3)
+memory usage: 178.8 MB
+None
+
+The needed Info of Anime:
+&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
+RangeIndex: 12294 entries, 0 to 12293
+Data columns (total 7 columns):
+ #   Column    Non-Null Count  Dtype  
+---  ------    --------------  -----  
+ 0   anime_id  12294 non-null  int64  
+ 1   name      12294 non-null  object 
+ 2   genre     12232 non-null  object 
+ 3   type      12269 non-null  object 
+ 4   episodes  12294 non-null  object 
+ 5   rating    12064 non-null  float64
+ 6   members   12294 non-null  int64  
+dtypes: float64(1), int64(2), object(4)
+memory usage: 672.5+ KB
+None
+
+Statistical data about Ratings:
+╒══════════╤═════════════╤═════════════╤════════════╤═══════╤═══════╤═══════╤═══════╤═══════╕
+│          │       count │        mean │        std │   min │   25% │   50% │   75% │   max │
+╞══════════╪═════════════╪═════════════╪════════════╪═══════╪═══════╪═══════╪═══════╪═══════╡
+│ user_id  │ 7.81374e+06 │ 36728       │ 20997.9    │     1 │ 18974 │ 36791 │ 54757 │ 73516 │
+├──────────┼─────────────┼─────────────┼────────────┼───────┼───────┼───────┼───────┼───────┤
+│ anime_id │ 7.81374e+06 │  8909.07    │  8883.95   │     1 │  1240 │  6213 │ 14093 │ 34519 │
+├──────────┼─────────────┼─────────────┼────────────┼───────┼───────┼───────┼───────┼───────┤
+│ rating   │ 7.81374e+06 │     6.14403 │     3.7278 │    -1 │     6 │     7 │     9 │    10 │
+╘══════════╧═════════════╧═════════════╧════════════╧═══════╧═══════╧═══════╧═══════╧═══════╛
+
+Statistical data about Anime:
+╒══════════╤═════════╤════════════╤═════════════╤═══════╤═════════╤══════════╤══════════╤═════════════════╕
+│          │   count │       mean │         std │   min │     25% │      50% │      75% │             max │
+╞══════════╪═════════╪════════════╪═════════════╪═══════╪═════════╪══════════╪══════════╪═════════════════╡
+│ anime_id │   12294 │ 14058.2    │ 11455.3     │  1    │ 3484.25 │ 10260.5  │ 24794.5  │ 34527           │
+├──────────┼─────────┼────────────┼─────────────┼───────┼─────────┼──────────┼──────────┼─────────────────┤
+│ rating   │   12064 │     6.4739 │     1.02675 │  1.67 │    5.88 │     6.57 │     7.18 │    10           │
+├──────────┼─────────┼────────────┼─────────────┼───────┼─────────┼──────────┼──────────┼─────────────────┤
+│ members  │   12294 │ 18071.3    │ 54820.7     │  5    │  225    │  1550    │  9437    │     1.01392e+06 │
+╘══════════╧═════════╧════════════╧═════════════╧═══════╧═════════╧══════════╧══════════╧═════════════════╛
+
+Nullity before cleaning in Rating:
+╒════╤═══════════╤════════════╤══════════╕
+│    │   user_id │   anime_id │   rating │
+╞════╪═══════════╪════════════╪══════════╡
+│  0 │         0 │          0 │        0 │
+╘════╧═══════════╧════════════╧══════════╛
+
+Nullity before cleaning in Anime:
+╒════╤════════════╤════════╤═════════╤════════╤════════════╤══════════╤═══════════╕
+│    │   anime_id │   name │   genre │   type │   episodes │   rating │   members │
+╞════╪════════════╪════════╪═════════╪════════╪════════════╪══════════╪═══════════╡
+│  0 │          0 │      0 │      62 │     25 │          0 │      230 │         0 │
+╘════╧════════════╧════════╧═════════╧════════╧════════════╧══════════╧═══════════╛
+
+Nullity after cleaning in Rating:
+╒════╤═══════════╤════════════╤══════════╕
+│    │   user_id │   anime_id │   rating │
+╞════╪═══════════╪════════════╪══════════╡
+│  0 │         0 │          0 │        0 │
+╘════╧═══════════╧════════════╧══════════╛
+
+Nullity after cleaning in Anime:
+╒════╤════════════╤════════╤═════════╤════════╤════════════╤══════════╤═══════════╕
+│    │   anime_id │   name │   genre │   type │   episodes │   rating │   members │
+╞════╪════════════╪════════╪═════════╪════════╪════════════╪══════════╪═══════════╡
+│  0 │          0 │      0 │       0 │      0 │          0 │        0 │         0 │
+╘════╧════════════╧════════╧═════════╧════════╧════════════╧══════════╧═══════════╛
+There are 1 duplicate rows in 7813737 rows in rating dataset.
+There are now 0 duplicate rows after process of duplication in 7813736 rows in rating dataset.
+There are 0 duplicate rows in 12017 rows in anime dataset.
+There are now 0 duplicate rows after process of duplication in 12017 rows in rating dataset.
+</code></pre>
+</div>
+<div class="output execute_result" data-execution_count="30">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>anime_id</th>
+      <th>name</th>
+      <th>genre</th>
+      <th>type</th>
+      <th>episodes</th>
+      <th>Average_Rating</th>
+      <th>members</th>
+      <th>user_id</th>
+      <th>Rate_of_user</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>32281</td>
+      <td>Kimi no Na wa.</td>
+      <td>Drama, Romance, School, Supernatural</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>9.37</td>
+      <td>200630</td>
+      <td>99</td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>32281</td>
+      <td>Kimi no Na wa.</td>
+      <td>Drama, Romance, School, Supernatural</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>9.37</td>
+      <td>200630</td>
+      <td>152</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>32281</td>
+      <td>Kimi no Na wa.</td>
+      <td>Drama, Romance, School, Supernatural</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>9.37</td>
+      <td>200630</td>
+      <td>244</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>32281</td>
+      <td>Kimi no Na wa.</td>
+      <td>Drama, Romance, School, Supernatural</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>9.37</td>
+      <td>200630</td>
+      <td>271</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>32281</td>
+      <td>Kimi no Na wa.</td>
+      <td>Drama, Romance, School, Supernatural</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>9.37</td>
+      <td>200630</td>
+      <td>278</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>7813605</th>
+      <td>6133</td>
+      <td>Violence Gekiga Shin David no Hoshi: Inma Dens...</td>
+      <td>Hentai</td>
+      <td>OVA</td>
+      <td>1</td>
+      <td>4.98</td>
+      <td>175</td>
+      <td>39532</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7813606</th>
+      <td>6133</td>
+      <td>Violence Gekiga Shin David no Hoshi: Inma Dens...</td>
+      <td>Hentai</td>
+      <td>OVA</td>
+      <td>1</td>
+      <td>4.98</td>
+      <td>175</td>
+      <td>48766</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7813607</th>
+      <td>6133</td>
+      <td>Violence Gekiga Shin David no Hoshi: Inma Dens...</td>
+      <td>Hentai</td>
+      <td>OVA</td>
+      <td>1</td>
+      <td>4.98</td>
+      <td>175</td>
+      <td>60365</td>
+      <td>4.0</td>
+    </tr>
+    <tr>
+      <th>7813608</th>
+      <td>26081</td>
+      <td>Yasuji no Pornorama: Yacchimae!!</td>
+      <td>Hentai</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>5.46</td>
+      <td>142</td>
+      <td>27364</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7813609</th>
+      <td>26081</td>
+      <td>Yasuji no Pornorama: Yacchimae!!</td>
+      <td>Hentai</td>
+      <td>Movie</td>
+      <td>1</td>
+      <td>5.46</td>
+      <td>142</td>
+      <td>48766</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>7813610 rows × 9 columns</p>
+</div>
+</div>
+</div>
+<div id="7d1f34d0" class="cell code" data-execution_count="31">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Let&#39;s see top animes</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>top_animes <span class="op">=</span> Data.drop_duplicates(subset<span class="op">=</span><span class="st">&quot;name&quot;</span>,keep<span class="op">=</span><span class="st">&quot;first&quot;</span>).sort_values(<span class="st">&quot;members&quot;</span>,ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>ax,figure <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">10</span>))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>bar_plot <span class="op">=</span> sns.barplot(data<span class="op">=</span>top_animes.head(<span class="dv">10</span>), x<span class="op">=</span><span class="st">&quot;name&quot;</span>, y<span class="op">=</span><span class="st">&quot;members&quot;</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>)  <span class="co"># Rotate x-axis labels if needed</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">&#39;Anime&#39;</span>,fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>)</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">&#39;Members&#39;</span>,fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>)</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">&#39;Top Anime by Members&#39;</span>,fontsize<span class="op">=</span><span class="dv">12</span>, fontweight<span class="op">=</span><span class="st">&#39;bold&#39;</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/67d3b47610f1b47e4336f63bd7b38a63e202f1cc.png" /></p>
+</div>
+</div>
+<div id="88896620" class="cell markdown">
+<h2
+id="from-this-draw-death-note-was-the-most-watched-anime-then-attack-on-titan-and-sao">From
+this draw, Death note was the most watched anime, then Attack on titan,
+and SAO</h2>
+<p>so will take their generes to know if people like same generies</p>
+</div>
+<div id="8f6c525e" class="cell code" data-execution_count="32"
+data-scrolled="true">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>top_types <span class="op">=</span> top_animes.sort_values([<span class="st">&quot;members&quot;</span>],ascending<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>top_types_group <span class="op">=</span> top_types[<span class="st">&quot;type&quot;</span>].value_counts().squeeze()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>ax,figure <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">5</span>,<span class="dv">5</span>))</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.pie(top_types_group,labels<span class="op">=</span>top_types_group.index)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/f6b5b8a13ca1eb5fb2dd91f0f7e00264c9c5f64d.png" /></p>
+</div>
+</div>
+<div id="067d1590" class="cell code" data-execution_count="33">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Viz_Anime(data<span class="op">=</span>top_types, type_of_movie<span class="op">=</span><span class="st">&quot;TV&quot;</span>):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">8</span>))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    sns.histplot(data[data[<span class="st">&quot;type&quot;</span>] <span class="op">==</span> type_of_movie][<span class="st">&quot;Average_Rating&quot;</span>], color<span class="op">=</span><span class="st">&quot;green&quot;</span>, kde<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>axs, bins<span class="op">=</span><span class="dv">20</span>, alpha<span class="op">=</span><span class="dv">1</span>, fill<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    axs.lines[<span class="dv">0</span>].set_color(<span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    axs.set_title(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">Anime&#39;s Average Ratings Distribution [Category: </span><span class="sc">{</span>type_of_movie<span class="sc">}</span><span class="ss">]</span><span class="ch">\n</span><span class="ss">&quot;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    axs.set_xlabel(<span class="st">&quot;Rating&quot;</span>)</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    axs.set_ylabel(<span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    axs.set_xticks(np.arange(<span class="dv">2</span>, <span class="dv">9</span>, step<span class="op">=</span><span class="fl">0.5</span>))  <span class="co"># Set label locations.</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    plt.show()</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Viz_User(data<span class="op">=</span>Data, type_of_movie<span class="op">=</span><span class="st">&quot;TV&quot;</span>):</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    fig, axs <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">8</span>))</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>    sns.histplot(data[data[<span class="st">&quot;type&quot;</span>] <span class="op">==</span> type_of_movie][<span class="st">&quot;Rate_of_user&quot;</span>], color<span class="op">=</span><span class="st">&quot;red&quot;</span>, kde<span class="op">=</span><span class="va">True</span>, ax<span class="op">=</span>axs, bins<span class="op">=</span><span class="st">&quot;auto&quot;</span>, alpha<span class="op">=</span><span class="dv">1</span>, fill<span class="op">=</span><span class="va">True</span>, edgecolor<span class="op">=</span><span class="st">&quot;black&quot;</span>)</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    axs.lines[<span class="dv">0</span>].set_color(<span class="st">&quot;blue&quot;</span>)</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    axs.set_title(<span class="ss">f&quot;</span><span class="ch">\n</span><span class="ss">Users Anime Ratings Distribution [Category: </span><span class="sc">{</span>type_of_movie<span class="sc">}</span><span class="ss">]</span><span class="ch">\n</span><span class="ss">&quot;</span>, fontsize<span class="op">=</span><span class="dv">20</span>)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    axs.set_xlabel(<span class="st">&quot;Rating&quot;</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>    axs.set_ylabel(<span class="st">&quot;Total&quot;</span>)</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    axs.set_xticks(np.arange(<span class="dv">2</span>, <span class="dv">9</span>, step<span class="op">=</span><span class="fl">0.5</span>))  <span class="co"># Set label locations.</span></span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code></pre></div>
+</div>
+<div id="8ad4cc78" class="cell code" data-execution_count="34"
+data-scrolled="false">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Draw for Categories</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;TV&quot;</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;TV&quot;</span>)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;OVA&quot;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;OVA&quot;</span>)</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;ONA&quot;</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;ONA&quot;</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;Special&quot;</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;Special&quot;</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;Movie&quot;</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;Movie&quot;</span>)</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>Viz_Anime(data<span class="op">=</span>top_types,type_of_movie<span class="op">=</span><span class="st">&quot;Music&quot;</span>)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>Viz_User(data<span class="op">=</span>Data,type_of_movie<span class="op">=</span><span class="st">&quot;Music&quot;</span>)</span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/8fa0561e0a2729448c2ce74b05f854fd33d6e6a2.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/b775db4f62bbf63ef9d173bf9af3e18e51af530b.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/4ecae6f471911d02311258ae104d0a327759a077.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/6e6fea566aa4a3b27b68da78f1bc8db35686ecf2.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/92721e7ef829b0a5fcf0c9097d0f2c93a7eb92f3.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/f6a2d082f8663f77633cbb6cfb522b17185e34ce.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/25c82ce47e4f11f7fc159bf4acd330637c3327d6.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/ab099b60bdda84810a767c350d53b8b3fd53ae85.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/bbf0c1ad4a5cd297d1b4e45f3dde2d22ab97957a.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/c656f30b93e7dac74d7ffaa41470645fa129cde6.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/228a45a10379fd418223f393cb331ab386b93089.png" /></p>
+</div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/ec1021de1369efd4844d4f0a9f6c8d11788541d6.png" /></p>
+</div>
+</div>
+<div id="e69eac03" class="cell markdown">
+<h1 id="insights-have-been-taken-from-this-data">Insights have been
+taken from this data</h1>
+<table>
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 29%" />
+<col style="width: 28%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Average Rating Range</th>
+<th>Users' Rating Range</th>
+<th>Most Common Rating</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>TV</td>
+<td>6-8</td>
+<td>6-10</td>
+<td>8</td>
+</tr>
+<tr class="even">
+<td>OVA</td>
+<td>5.5-7</td>
+<td>6-9</td>
+<td>7</td>
+</tr>
+<tr class="odd">
+<td>ONA</td>
+<td>4-7.5</td>
+<td>5-9</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>Movie</td>
+<td>4.5-8</td>
+<td>6-10</td>
+<td>8</td>
+</tr>
+<tr class="odd">
+<td>Special</td>
+<td>5.5-7.5</td>
+<td>5-9</td>
+<td>7</td>
+</tr>
+<tr class="even">
+<td>Music</td>
+<td>3.5-6.5</td>
+<td>5-10</td>
+<td>7</td>
+</tr>
+</tbody>
+</table>
+<p>That means we need to put full foucs on <strong>TV</strong> and
+<strong>Movie</strong> If we need to make sure of our accuracy in
+similarities</p>
+</div>
+<div id="ac250b40" class="cell code" data-execution_count="35">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># What aboue generies ? </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>top_genere <span class="op">=</span> top_animes[[<span class="st">&quot;genre&quot;</span>]]</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>top_genere[<span class="st">&quot;genre&quot;</span>] <span class="op">=</span> top_genere[<span class="st">&quot;genre&quot;</span>].<span class="bu">str</span>.split(<span class="st">&quot;, | , | ,&quot;</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>top_genere <span class="op">=</span> top_genere.explode(<span class="st">&quot;genre&quot;</span>)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>top_genere[<span class="st">&quot;genre&quot;</span>] <span class="op">=</span> top_genere[<span class="st">&quot;genre&quot;</span>].<span class="bu">str</span>.title()</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;Unique Values of Genries = </span><span class="sc">{</span><span class="bu">len</span>(top_genere[<span class="st">&#39;genre&#39;</span>].unique())<span class="sc">}</span><span class="ss">, and they are : &quot;</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i,value <span class="kw">in</span> <span class="bu">enumerate</span>(top_genere[<span class="st">&#39;genre&#39;</span>].unique()):</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f&quot;</span><span class="sc">{</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">-</span><span class="sc">{</span>value<span class="sc">}</span><span class="ss">&quot;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Unique Values of Genries = 43, and they are : 
+1-Mystery
+2-Police
+3-Psychological
+4-Supernatural
+5-Thriller
+6-Action
+7-Drama
+8-Fantasy
+9-Shounen
+10-Super Power
+11-Adventure
+12-Game
+13-Romance
+14-Magic
+15-Military
+16-Comedy
+17-School
+18-Mecha
+19-Sci-Fi
+20-Martial Arts
+21-Slice Of Life
+22-Horror
+23-Seinen
+24-Ecchi
+25-Demons
+26-Parody
+27-Space
+28-Vampire
+29-Dementia
+30-Historical
+31-Harem
+32-Shoujo
+33-Music
+34-Samurai
+35-Sports
+36-Kids
+37-Josei
+38-Shoujo Ai
+39-Shounen Ai
+40-Cars
+41-Hentai
+42-Yaoi
+43-Yuri
+</code></pre>
+</div>
+</div>
+<div id="eed8d978" class="cell code" data-execution_count="36">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>top_gener_dic <span class="op">=</span> top_genere[<span class="st">&quot;genre&quot;</span>].value_counts().to_dict()</span></code></pre></div>
+</div>
+<div id="0bdce6f8" class="cell code" data-execution_count="37">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> wordcloud <span class="im">import</span> WordCloud</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>wc <span class="op">=</span> WordCloud()</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>ax,fig <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">20</span>,<span class="dv">20</span>))</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>text <span class="op">=</span> wc.generate_from_frequencies(top_gener_dic)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>plt.imshow(text)<span class="op">;</span></span></code></pre></div>
+<div class="output display_data">
+<p><img
+src="vertopal_2c110400265a4062862662dfcc4b45e8/558d8c934c41a8632293bdd4c1675b2500fed94f.png" /></p>
+</div>
+</div>
+<div id="249876a6" class="cell code" data-execution_count="38">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>X_train, X_test<span class="op">=</span> train_test_split(Data, test_size<span class="op">=</span><span class="fl">0.3</span>, random_state<span class="op">=</span><span class="dv">42</span>)</span></code></pre></div>
+</div>
+<div id="9f1f6c48" class="cell code" data-execution_count="39">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime <span class="op">=</span> pd.pivot_table(data<span class="op">=</span>X_train,index<span class="op">=</span><span class="st">&quot;user_id&quot;</span>,columns<span class="op">=</span><span class="st">&quot;name&quot;</span>,values<span class="op">=</span><span class="st">&quot;Rate_of_user&quot;</span>).T</span></code></pre></div>
+</div>
+<div id="001f3578" class="cell code" data-execution_count="40">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime_dense <span class="op">=</span> User_Vs_Anime.replace({np.nan:<span class="dv">0</span>})</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime_dense</span></code></pre></div>
+<div class="output execute_result" data-execution_count="40">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>1</th>
+      <th>3</th>
+      <th>5</th>
+      <th>7</th>
+      <th>8</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>14</th>
+      <th>15</th>
+      <th>...</th>
+      <th>73506</th>
+      <th>73507</th>
+      <th>73508</th>
+      <th>73509</th>
+      <th>73510</th>
+      <th>73511</th>
+      <th>73512</th>
+      <th>73513</th>
+      <th>73515</th>
+      <th>73516</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>001</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009 Re:Cyborg</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009-1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009-1: RB</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>xxxHOLiC Kei</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>9.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>xxxHOLiC Movie: Manatsu no Yoru no Yume</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>xxxHOLiC Rou</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>xxxHOLiC Shunmuki</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>◯</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>9572 rows × 68383 columns</p>
+</div>
+</div>
+</div>
+<div id="d64a7330" class="cell code" data-execution_count="41">
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>MM <span class="op">=</span> MinMaxScaler()</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime_dense_fit <span class="op">=</span> MM.fit_transform(User_Vs_Anime_dense)</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime_dense_normalized <span class="op">=</span> pd.DataFrame(User_Vs_Anime_dense_fit,</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                                                  columns<span class="op">=</span>User_Vs_Anime.columns,</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>                                                  index<span class="op">=</span>User_Vs_Anime.index)</span></code></pre></div>
+</div>
+<div id="04b4f49e" class="cell code" data-execution_count="42"
+data-scrolled="false">
+<div class="sourceCode" id="cb20"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>User_Vs_Anime_dense_normalized.head(<span class="dv">50</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="42">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>user_id</th>
+      <th>1</th>
+      <th>3</th>
+      <th>5</th>
+      <th>7</th>
+      <th>8</th>
+      <th>10</th>
+      <th>11</th>
+      <th>12</th>
+      <th>14</th>
+      <th>15</th>
+      <th>...</th>
+      <th>73506</th>
+      <th>73507</th>
+      <th>73508</th>
+      <th>73509</th>
+      <th>73510</th>
+      <th>73511</th>
+      <th>73512</th>
+      <th>73513</th>
+      <th>73515</th>
+      <th>73516</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>001</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009 Re:Cyborg</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009-1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>009-1: RB</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>00:08</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>07-Ghost</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1+2=Paradise</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>100%</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>100-man-nen Chikyuu no Tabi: Bander Book</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1000-nen Joou: Queen Millennia</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1001 Nights</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11-nin Iru!</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11eyes</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.3</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11eyes Picture Drama</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>11eyes: Momoiro Genmutan</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.3</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>12-gatsu no Uta</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>12-sai.</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>12-sai.: Chicchana Mune no Tokimeki</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>15 Bishoujo Hyouryuuki</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>1989</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>20-dai no Heya-hen</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2002-nen Harmoni Ondo</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2005-nen Uchuu no Tabi</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2010</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2020 Nyeon Ujuui Wonder Kiddy</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>21 Emon Uchuu ike! Hadashi no Princess</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>21 Seiki Manga Hajimete Monogatari</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>21-ji no Onna: Newscaster Katsuragi Miki</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>2x1</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3 Choume no Tama: Onegai! Momo-chan wo Sagashite!!</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3 Choume no Tama: Uchi no Tama Shirimasenka?</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3-Nen C-Gumi 14-Ban Kubozono Chiyoko no Nyuukaku</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3-gatsu no Lion meets Bump of Chicken</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3-tsu no Hanashi</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3-tsu no Kumo</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>30-sai no Hoken Taiiku</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>30-sai no Hoken Taiiku Specials</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>30th Gundam Perfect Mission</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3D Onara Gorou ga Dance Dance Dance!!</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3Ping Lovers!☆Ippu Nisai no Sekai e Youkoso♪ The Animation</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3x3 Eyes</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>3x3 Eyes Seima Densetsu</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4-Day Weekend</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>4.Eyes</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>44-hiki no Neko</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>48x61</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>6 Angels</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>663114</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+    <tr>
+      <th>69 Pink Riders</th>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+    </tr>
+  </tbody>
+</table>
+<p>50 rows × 68383 columns</p>
+</div>
+</div>
+</div>
+<div id="bfc1686e" class="cell code" data-execution_count="43">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>model_matrix <span class="op">=</span> csr_matrix(User_Vs_Anime_dense_normalized.values)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>model_knn <span class="op">=</span> NearestNeighbors(metric <span class="op">=</span> <span class="st">&quot;cosine&quot;</span>, algorithm <span class="op">=</span> <span class="st">&quot;brute&quot;</span>)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>model_knn.fit(model_matrix)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="43">
+<pre><code>NearestNeighbors(algorithm=&#39;brute&#39;, metric=&#39;cosine&#39;)</code></pre>
+</div>
+</div>
+<div id="fa31fcf5" class="cell code" data-execution_count="105">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Anime_Number(x):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10000</span>) :</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (User_Vs_Anime_dense_normalized.index[i] <span class="op">==</span> x) :</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>            <span class="cf">return</span>(i)</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">break</span></span></code></pre></div>
+</div>
+<div id="7c3f2b35" class="cell code" data-execution_count="106">
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>Anime_Number(<span class="st">&#39;Death Note&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="106">
+<pre><code>1606</code></pre>
+</div>
+</div>
+<div id="7d6c6ef7" class="cell code" data-execution_count="107">
+<div class="sourceCode" id="cb26"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>query_no <span class="op">=</span> Anime_Number(<span class="st">&#39;Fullmetal Alchemist: Brotherhood&#39;</span>) <span class="co"># random anime title and finding recommendation</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&quot;We will find recommendation for </span><span class="sc">{</span>query_no<span class="sc">}</span><span class="ss"> no anime which is </span><span class="sc">{</span>User_Vs_Anime_dense_normalized<span class="sc">.</span>index[query_no]<span class="sc">}</span><span class="ss">.&quot;</span>)</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>distances, indices <span class="op">=</span> model_knn.kneighbors(User_Vs_Anime_dense_normalized.iloc[query_no,:].values.reshape(<span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>), n_neighbors <span class="op">=</span> <span class="dv">6</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>We will find recommendation for 2285 no anime which is Fullmetal Alchemist: Brotherhood.
+</code></pre>
+</div>
+</div>
+<div id="1a145b45" class="cell code" data-execution_count="108">
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="bu">len</span>(distances.flatten())):</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;Recommendations for </span><span class="sc">{</span>User_Vs_Anime_dense_normalized<span class="sc">.</span>index[query_no]<span class="sc">}</span><span class="ss">:</span><span class="ch">\n</span><span class="ss">&#39;</span>)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f&#39;</span><span class="sc">{</span>i<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>User_Vs_Anime_dense_normalized<span class="sc">.</span>index[indices.flatten()[i]]<span class="sc">}</span><span class="ss">, with distance of </span><span class="sc">{</span>distances<span class="sc">.</span>flatten()[i]<span class="sc">}</span><span class="ss">&#39;</span>)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>Recommendations for Fullmetal Alchemist: Brotherhood:
+
+1: Fullmetal Alchemist, with distance of 0.5947083368175134
+2: Death Note, with distance of 0.6085678105097788
+3: Shingeki no Kyojin, with distance of 0.6107882130985877
+4: Code Geass: Hangyaku no Lelouch, with distance of 0.6134408201020427
+5: Code Geass: Hangyaku no Lelouch R2, with distance of 0.6176581674184154
+</code></pre>
+</div>
+</div>
+</body>
+</html>
