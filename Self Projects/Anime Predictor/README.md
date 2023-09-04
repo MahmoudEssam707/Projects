@@ -2,8 +2,6 @@
 
 The Anime Recommendation System is a Python project that uses collaborative filtering to recommend anime to users based on their viewing history and ratings. It utilizes a dataset containing information from 73,516 users on 12,294 anime titles. This README file provides an in-depth overview of the project, including dataset details, requirements, usage instructions, data cleaning, visualization, recommendation system, and more.
 
-![Anime Recommendation System](https://storage.googleapis.com/kaggle-datasets-images/1225408/2045512/556c46d136da51c2ac6690b199f1c6e5/dataset-cover.jpeg?t=2021-03-21-23-20-40.png)
-
 ## Table of Contents
 
 - [Dataset](#dataset)
