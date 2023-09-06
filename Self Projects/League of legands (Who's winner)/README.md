@@ -61,6 +61,6 @@ Contributions to this project are welcome! You can contribute by improving the m
 
 ## License
 
-This project is licensed under the MIT License, which allows open collaboration and usage while attributing the original work to the authors.
+This project is licensed under the [License](https://creativecommons.org/publicdomain/zero/1.0/), which allows open collaboration and usage while attributing the original work to the authors.
 
 We hope that this project will aid both League of Legends enthusiasts and data analysts in gaining deeper insights into the game and improving their strategies.
