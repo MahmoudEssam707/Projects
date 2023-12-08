@@ -25,7 +25,7 @@ public class MLFQ {
                 System.out.println("Running process: " + process.getName() + " from Queue " + currentQueue +
                         " with burst time: " + process.getBurstTime());
 
-                int timeSlice = timeSlices[currentQueue]; // Dynamic time slice based on queue priority
+                int timeSlice = timeSlices[currentQueue]; 
                 if (process.getBurstTime() <= timeSlice) {
                     waitingTimes[processes.indexOf(process)] += currentTime - arrivalTimes[processes.indexOf(process)];
                     currentTime += process.getBurstTime();
